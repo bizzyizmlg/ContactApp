@@ -1,7 +1,13 @@
 package cst135n.w1.d1;
 
-public class BusinessContact extends BaseContact {
+import java.io.Serializable;
+
+public class BusinessContact extends BaseContact implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String businessHours;
 	private String businessWeb;
 
@@ -11,6 +17,23 @@ public class BusinessContact extends BaseContact {
 		this.businessWeb = businessWeb;
 	}
 	
+
+
+
+
+
+	public BusinessContact(String name, String description, int phone, String businessHours2, String businessWeb2,
+			String option, Photo p, Location l) {
+		super(name, description, phone);
+		this.setPhoto(p);
+		this.setLocation(l);
+		
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
 
 
 	public String getBusinessHours() {
